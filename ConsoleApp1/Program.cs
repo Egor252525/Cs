@@ -1,29 +1,9 @@
-﻿//using System;
-
-//class Tr
-//{
-//    public void Test()
-//    {
-//        Console.WriteLine("zzz")
-//    }
-//}
-
-//class Program
-//{
-//    static void Main(string[] args)
-//    {
-
-//    }
-
-//}
-
 using System;
 
 public class Rectangle
 {
-    private double width
-    private double height
-
+    private double width;
+    private double height;
     public Rectangle()
     {
         width = 1.0;
@@ -41,7 +21,7 @@ public class Rectangle
     public Rectangle(Rectangle copy)
     {
         width = copy.width;
-        height = copу.height;
+        height = copy.height;
         Console.WriteLine("Конструктор копирования.");
     }
 
@@ -57,7 +37,7 @@ public class Rectangle
 
     public double CalcS()
     {
-        return width + height;
+        return width * height;
     }
 
     public double Width
@@ -77,14 +57,14 @@ public class Rectangle
         Rectangle r1 = new Rectangle();
         Console.WriteLine($"Площадь r1: {r1.CalcS()}");
 
-        Rectangle r2 = new Rectangle(5,3);
-        Console.WriteLine($"Площадь r1: {r2.CalcS()}");
+        Rectangle r2 = new Rectangle(5, 3);
+        Console.WriteLine($"Площадь r2: {r2.CalcS()}");
 
         Rectangle r3 = new Rectangle(r2);
-        Console.WriteLine($"Площадь r1: {r3.CalcS()}");
+        Console.WriteLine($"Площадь r3: {r3.CalcS()}");
 
         r2.Width = 7;
-        Console.WriteLine($"Новая площадь r2: {r2.CalcS()}")
+        Console.WriteLine($"Новая площадь r2: {r2.CalcS()}");
 
 
         Console.ReadKey();
